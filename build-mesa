@@ -11,10 +11,10 @@ cd_package
 run_autogen \
 --without-dri-drivers \
 --disable-gallium-llvm \
---with-platforms=nouveau \
+--with-gallium-drivers=nouveau \
 --enable-gbm \
 --enable-egl \
---with-egl-platforms=drm,x11,wayland \
+--with-platforms=drm,x11,wayland \
 --enable-gles1 \
 --enable-gles2 \
 --enable-opengl \

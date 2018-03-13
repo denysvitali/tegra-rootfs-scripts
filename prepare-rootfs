@@ -123,7 +123,7 @@ run_in_qemu systemctl enable NetworkManager
 run_in_qemu systemctl enable bluetooth
 
 
-cp -R $TOP/linux-firmware/nvidia/ $SYSROOT/lib/firmware/
+cp -R $TOP/linux-firmware/linux-firmware/nvidia/ $SYSROOT/lib/firmware/
 cp -R $TOP/firmware/* $SYSROOT/lib/firmware/ || true
 
 
@@ -139,8 +139,8 @@ sudo -s -- <<EOF
 chown -R root:root $SYSROOT/*
 chown -R 1000:1000 $SYSROOT/home/alarm
 chown -R $USER $SYSROOT/$NV_PREFIX $SYSROOT/boot $SYSROOT/lib/modules $SYSROOT/lib/firmware
-chmod -R 700 /root/.ssh/
-chmod -R 700 /home/alarm/.ssh/
+chmod -R 700 $SYSROOT/root/.ssh/
+chmod -R 700 $SYSROOT/home/alarm/.ssh/
 EOF
 
 status "Target FS ready to compile the open graphics stack!"

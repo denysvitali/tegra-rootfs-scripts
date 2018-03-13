@@ -1,7 +1,7 @@
 #!/bin/bash
-adb push out/rootfs.tar.gz
-adb push bin/busybox-armv6l /cache/
-adb shell -c 'chmod u+x /cache/busybox-armv6l'
-adb shell -c 'make_ext4 /dev/block/mmcblk0p4 && mount /dev/block/mmcblk0p4 /system && /cache/busybox-armv6l tar -xvf /sdcard/rootfs.tar.gz -C /system'
-adb reboot-bootloader
+echo "adb push out/rootfs.tar.gz /sdcard"
+echo "adb push bin/busybox-armv6l /cache/"
+echo "adb shell 'chmod u+x /cache/busybox-armv6l'"
+echo "adb shell 'make_ext4fs /dev/block/mmcblk0p4 && mount /dev/block/mmcblk0p4 /system && /cache/busybox-armv6l tar -xvf /sdcard/rootfs.tar.gz -C /system'"
+echo "adb reboot-bootloader"
 echo "RootFS deployed - ready to boot!"

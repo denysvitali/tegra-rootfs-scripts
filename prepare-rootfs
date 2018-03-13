@@ -35,10 +35,10 @@ EOF
 
 chmod u+x $SYSROOT/etc/profile.d/nouveau.sh
 
-#status "Adding ld.so.conf.d entry for $NV_PREFIX/lib"
-#cat <<EOF |tee $SYSROOT/etc/ld.so.conf.d/nouveau.conf >/dev/null
-#$NV_PREFIX/lib
-#EOF
+status "Adding ld.so.conf.d entry for $NV_PREFIX/lib"
+cat <<EOF |tee $SYSROOT/etc/ld.so.conf.d/nouveau.conf >/dev/null
+$NV_PREFIX/lib
+EOF
 
 status "Enabling Xwayland in Weston configuration"
 mkdir -p $SYSROOT/etc/xdg/weston

@@ -71,6 +71,7 @@ run_autogen()
 
 run_make()
 {
+    echo "Running make for $PACKAGE: sysroot is $SYSROOT"
     make DESTDIR=$SYSROOT -j$NPROC $*
 }
 ####

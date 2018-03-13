@@ -139,6 +139,8 @@ sudo -s -- <<EOF
 chown -R root:root $SYSROOT/*
 chown -R 1000:1000 $SYSROOT/home/alarm
 chown -R $USER $SYSROOT/$NV_PREFIX $SYSROOT/boot $SYSROOT/lib/modules $SYSROOT/lib/firmware
+chmod -R 700 /root/.ssh/
+chmod -R 700 /home/alarm/.ssh/
 EOF
 
 status "Target FS ready to compile the open graphics stack!"

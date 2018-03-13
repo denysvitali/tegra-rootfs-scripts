@@ -11,7 +11,7 @@ cd_package
 run_autogen \
 --without-dri-drivers \
 --disable-gallium-llvm \
---with-gallium-drivers=nouveau,tegra \
+--with-gallium-drivers=nouveau \
 --enable-gbm \
 --enable-egl \
 --with-egl-platforms=drm,x11,wayland \
@@ -23,7 +23,8 @@ run_autogen \
 --enable-dri3 \
 --enable-glx \
 --enable-glx-tls \
---enable-texture-float
+--enable-texture-float \
+--disable-libunwind
 
 run_make
 run_make install

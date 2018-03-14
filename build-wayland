@@ -10,7 +10,7 @@ cd_package
 
 run_autogen \
 --disable-documentation \
---disable-scanner
+--with-host-scanner
 
 run_make
 run_make install

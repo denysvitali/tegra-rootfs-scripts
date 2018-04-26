@@ -123,7 +123,7 @@ run_in_qemu systemctl enable NetworkManager
 run_in_qemu systemctl enable bluetooth
 
 
-cp -R $TOP/linux-firmware/linux-firmware/nvidia/ $SYSROOT/lib/firmware/
+cp -R $TOP/linux-firmware/nvidia/ $SYSROOT/lib/firmware/
 cp -R $TOP/firmware/* $SYSROOT/lib/firmware/ || true
 
 
